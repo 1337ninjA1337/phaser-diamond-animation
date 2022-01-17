@@ -58,17 +58,12 @@ class Scene1 extends Phaser.Scene {
         this.tweens.add({
             targets: this.diamond,
             y: 100,
+            scale: 0,
             duration: 3000,
             ease: 'Back',   
             delay: 2500
         });
-        this.tweens.add({
-            targets: this.diamond,
-            scale: 0,
-            duration: 1500,
-            ease: 'linear',
-            delay: 2500,
-        })
+        
 
         this.diamond.on('animationcomplete', ()=>{
             this.diamond.play("middle_anim");
